@@ -11,7 +11,8 @@
   * _Your local WordPress server won’t know when your CSS file(s) are updated._ So, you will need to reflesh your browser (COMMAND+R or CTRL+R).
 * In the navbar walker, changed `data-toggle` to `data-bs-toggle` so that the dropdowns work OK.
 * `editor.css` is based on BS4 Reboot. Update that.
-* Abstracted the mainbody-widget-area-1 to its own PHP file, or to a hook.
-* Added some more hooks
-    b5st_mainbody_start
-    b5st_mainbody_end
+* Abstracted the mainbody-widget-area-1 to insertion via an action hook.
+* Added some more hooks:
+    * b5st_mainbody_start
+    * b5st_mainbody_end
+* Several other improvements.
