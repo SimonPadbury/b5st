@@ -23,7 +23,7 @@
 	$text['page']     = 'Page %s'; // text 'Page N'
 	$text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
 
-	$wrap_before    = '<div class="bg-light"><nav aria-label="breadcrumb" class="container-xxl py-3"><ol class="breadcrumb m-0" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+	$wrap_before    = '<div class="border-bottom"><nav aria-label="breadcrumb" class="container-xxl py-3"><ol class="breadcrumb m-0" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	//$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	
 	//----b5st//

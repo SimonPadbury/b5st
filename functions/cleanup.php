@@ -55,3 +55,12 @@ add_filter( 'the_generator', 'no_generator' );
 }
 add_filter( 'script_loader_src', 'b5st_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'b5st_remove_script_version', 15, 1 );*/
+
+// Comment Reply Button
+
+add_filter('comment_reply_link', 'replace_reply_link_class');
+
+function replace_reply_link_class($class){
+  $class = str_replace("class='comment-reply-link", "class='comment-reply-link btn btn-primary", $class);
+  return $class;
+}

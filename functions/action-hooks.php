@@ -105,7 +105,7 @@ function b5st_footer_after() {
 function b5st_bottomline() {
 	if ( ! has_action('bottomline') ) {
 		?>
-    <div class="container">
+    <div class="container-xxl">
       <div class="row pt-3">
         <div class="col-sm">
           <p class="text-center text-sm-start">&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></p>

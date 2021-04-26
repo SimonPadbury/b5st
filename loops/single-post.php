@@ -19,7 +19,7 @@
           <div class="me-1 border rounded-circle overflow-hidden">
             <?php b5st_author_avatar(); ?>
           </div>
-          <?php _e('By ', 'b5st'); the_author_posts_link(); ?>
+          <?php _e('By', 'b5st'); echo '&nbsp;'; the_author_posts_link(); ?>
         </div>
 
         <div class="pe-3">
@@ -48,7 +48,6 @@
 
     <section class="wrap-md my-5 long-read">
       <?php the_content(); ?>
-
     </section>
 
     <?php wp_link_pages(); ?>
@@ -61,6 +60,20 @@
     </div>
   <?php  }; ?>
 
+  <section class="wrap-md author-bio d-flex border-top border-bottom py-5">
+    <div class="border rounded-circle overflow-hidden">
+      <?php b5st_author_bio_avatar(); ?>
+    </div>
+    <div class="ms-3">
+      <p class="h4 author-name"><?php _e('Author: ', 'b5st'); the_author(); ?></p>
+      <?php if (b5st_author_description()) {
+        ?>
+        <div class="author-description"><?php b5st_author_description(); ?></div>
+        <?php
+      } ?>
+      <p class="author-other-posts mb-0"><?php _e('Other posts by ', 'b5st'); the_author_posts_link(); ?></p>
+    </div>
+  </section><!-- /.author-bio -->
 
   <?php
     // This continues in the single post loop
@@ -70,48 +83,50 @@
     comments_template('/loops/single-post-comments.php');
 
     endif;
-  endwhile; else :
-    get_template_part('loops/404');
-  endif;
   ?>
 
-  <footer class="container my-5">
-    <div class="wrap-md author-bio d-flex border-top pt-5">
-      <div class="border rounded-circle overflow-hidden">
-        <?php b5st_author_bio_avatar(); ?>
+  <section class="container-xxl my-5">
+    <div class="row g-2">
+      <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
+      <div class="col-sm">
+        <div class="border rounded bg-light d-flex align-items-center">
+          <i class="bi bi-chevron-compact-left fs-1"></i>
+          <div>
+            Previous post<br>
+            <?php previous_post_link( '%link', '%title' ) ?>
+          </div>
+        </div>
       </div>
-      <div class="ms-3">
-        <p class="h4 author-name"><?php _e('Author: ', 'b5st'); the_author(); ?></p>
-        <?php if (b5st_author_description()) {
-          ?>
-          <div class="author-description"><?php b5st_author_description(); ?></div>
-          <?php
-        } ?>
-        <p class="author-other-posts mb-0"><?php _e('Other posts by ', 'b5st'); the_author_posts_link(); ?></p>
-      </div>
-    </div><!-- /.author-bio -->
+      <?php } ?>
 
-    <div class="row my-5 border-top border-bottom py-3">
-      <div class="col text-start">
+      <?php if (strlen(get_next_post()->post_title) > 0) { ?>
+        <div class="col-sm">
+          <div class="border rounded bg-light d-flex flex-row-reverse align-items-center">
+          <i class="bi bi-chevron-compact-right fs-1"></i>
+          <div class="text-end">
+            Next Post<br>
+            <?php next_post_link( '%link', '%title' ) ?>
+          </div>
+        </div>
+      </div>
+      <?php } ?>
+
+      <!-- `<div class="col text-start">
         <?php previous_post_link('%link', '<i class="bi bi-arrow-left"></i> Previous post: '.'%title'); ?>
       </div>
       <div class="col text-end">
         <?php next_post_link('%link', 'Next post: '.'%title'.' <i class="bi bi-arrow-right"></i>'); ?>
-      </div>
+      </div> -->
     </div>
+  </section>
 
-  </footer>
 
-  <?php if(is_active_sidebar('mainbody-widget-area-1')): ?>
-    <section id="site-main-widgets">
-      <div class="container">
-        <div class="row pt-5 pb-4" id="mainbody-widget-area-1" role="navigation">
-          <?php
-            b5st_mainbody_widgets_1_before();
-            dynamic_sidebar('mainbody-widget-area-1');
-            b5st_mainbody_widgets_1_after();
-          ?>
-        </div>
-      </div>
-    </section>
-  <?php endif; ?>
+
+
+  <?php
+  endwhile; else :
+    get_template_part('loops/404');
+  endif;
+?>
+
+

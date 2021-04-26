@@ -1,6 +1,6 @@
 <?php
 /*
- * Navbar walker nav menu
+ * Bootstrap Navbar Walker_Nav_menu
  */
 
 class b5st_walker_nav_menu extends Walker_Nav_menu {

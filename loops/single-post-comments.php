@@ -22,8 +22,8 @@ function b5st_comment($comment, $args, $depth) {
   <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 <?php endif; ?>
 
-  <div class="comment-author vcard">
-    <div class="float-left pr-3">
+  <div class="comment-author vcard d-flex">
+    <div class="pe-3">
       <?php echo get_avatar( $comment->comment_author_email, $size = '52'); ?>
     </div>
     <div>
@@ -36,20 +36,20 @@ function b5st_comment($comment, $args, $depth) {
   </div>
 
   <div>
-      <?php comment_text() ?>
+    <?php comment_text() ?>
   </div>
 
   <div class="reply">
-      <p>
-          <?php comment_reply_link( array_merge( $args, array(
-              'add_below' => $add_below,
-              'reply_text' => __('<i class="bi bi-reply"></i> Reply', 'textdomain'),
-              'depth' => $depth,
-              'max_depth' => $args['max_depth']
-              ))
-          ); ?>
-          <?php edit_comment_link('<span class="btn btn-secondary">' . __('<i class="bi bi-pen"></i> Edit this reply', 'b5st') . '</span>',' ','' ); ?>
-      </p>
+    <p>
+      <?php comment_reply_link( array_merge( $args, array(
+        'add_below' => $add_below,
+        'reply_text' => __('<i class="bi bi-reply"></i> Reply', 'textdomain'),
+        'depth' => $depth,
+        'max_depth' => $args['max_depth']
+        ))
+      ); ?>
+      <?php edit_comment_link('<span class="btn btn-secondary">' . __('<i class="bi bi-pen"></i> Edit this reply', 'b5st') . '</span>',' ','' ); ?>
+    </p>
   </div>
 
 <?php if ( 'div' != $args['style'] ) : ?>
@@ -106,9 +106,9 @@ if (have_comments()) : ?>
         ?>
       </p>
 
-      <ol class="commentlist">
+      <ol class="comment-list">
         <?php wp_list_comments('type=comment&callback=b5st_comment');?>
-      </ol>
+      </ol><!-- /.comment-list -->
 
       <p class="text-muted">
         <?php paginate_comments_links(); ?>
@@ -130,6 +130,7 @@ if (have_comments()) : ?>
   <div class="comments-wrap bg-light border px-3 py-1">
     <div>
         <h3 class="mt-3"><?php comment_form_title(__('Leave a Reply', 'b5st'), __('Responses to %s', 'b5st')); ?></h3>
+        <p>Required fields are marked <span class="fs-4">*</span></p>
         <p><?php cancel_comment_reply_link(); ?></p>
         <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
         <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'b5st'), wp_login_url(get_permalink())); ?></p>
@@ -145,28 +146,34 @@ if (have_comments()) : ?>
           <?php else : ?>
 
           <div class="form-group">
-            <label for="author"><?php _e('Your name', 'b5st'); if ($req) echo ' <span class="text-muted">' . __('(required)', 'b5st') . '</span>'; ?></label>
-            <input type="text" class="form-control" name="author" id="author" placeholder="<?php _e('Your name', 'b5st'); ?>" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
+            <label for="author" class="mb-2">
+              <?php _e('Your name', 'b5st'); if ($req) echo '*'; ?>
+            </label>
+            <input type="text" class="form-control" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
           </div>
 
           <div class="form-group">
-            <label for="email"><?php _e('Your email address', 'b5st'); if ($req) echo '&nbsp;<span class="text-muted">' . _e('(required, but will not be published)', 'b5st') . '</span>'; ?></label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="<?php _e('Your email address', 'b5st'); ?>" value="<?php echo esc_attr($comment_author_email); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
+            <label for="email" class="my-2">
+              <?php _e('Your email address', 'b5st'); if ($req) echo '*'; echo '<span class="text-muted">' . __('(will not be published)', 'b5st') . '</span>'; ?>
+            </label>
+            <input type="email" class="form-control" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" <?php if ($req) echo 'aria-required="true"'; ?>>
           </div>
 
           <div class="form-group">
-            <label for="url"><?php echo __('Your website', 'b5st') . ' <span class="text-muted">' . __('if you have one (not required)', 'b5st') . '</span>'; ?></label>
-            <input type="url" class="form-control" name="url" id="url" placeholder="<?php _e('Your website url', 'b5st'); ?>" value="<?php echo esc_attr($comment_author_url); ?>">
+            <label for="url" class="my-2">
+              <?php echo __('Your website or blog', 'b5st') . '<span class="text-muted">' . __(' (not required)', 'b5st') . '</span>'; ?>
+            </label>
+            <input type="url" class="form-control" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>">
           </div>
 
           <?php endif; ?>
 
           <div class="form-group">
-            <label for="comment"><?php _e('Your comment', 'b5st'); ?></label>
-            <textarea name="comment" class="form-control mt-1 mb-3" id="comment" placeholder="<?php _e('Your comment', 'b5st'); ?>" rows="8" aria-required="true"></textarea>
+            <label for="comment" class="my-2"><?php _e('Your comment:', 'b5st'); ?></label>
+            <textarea name="comment" class="form-control mt-1 mb-3" id="comment" rows="8" aria-required="true"></textarea>
           </div>
 
-          <p><input name="submit" class="btn btn-default" type="submit" id="submit" value="<?php _e('Post comment', 'b5st'); ?>"></p>
+          <p><input name="submit" class="btn btn-primary" type="submit" id="submit" value="<?php _e('Post comment', 'b5st'); ?>"></p>
 
           <?php comment_id_fields(); ?>
           <?php do_action('comment_form', $post->ID); ?>
