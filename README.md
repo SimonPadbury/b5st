@@ -6,7 +6,7 @@
 
 ------------------
 
-> b5st is a simple, Gutenberg-compatible WordPress starter theme loaded with Bootstrap 5 and Bootstrap Icons — using Gulp for preprocessing its SCSS into CSS.
+> b5st is a simple, Gutenberg-compatible WordPress starter theme loaded with Bootstrap 5 and Bootstrap Icons — using node-sass for preprocessing its SCSS into CSS.
 
 ## Basic features
 
