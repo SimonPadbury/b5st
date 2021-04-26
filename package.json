@@ -1,0 +1,16 @@
+{
+  "name": "b5st",
+  "version": "1.0.0",
+  "description": "WordPress starter theme with Bootstrap 5",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch theme/scss -o theme/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Padbury",
+  "license": "Unlicence",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

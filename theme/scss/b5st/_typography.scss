@@ -1,0 +1,33 @@
+header h2 a {
+  color: rgba(0,0,0,.9);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Drop cap (copied from the Gutenberg editor CSS)
+.has-drop-cap:not(:focus):first-letter {
+  float: left;
+  font-size: 8.4em;
+  line-height: .68;
+  font-weight: 100;
+  margin: .05em .1em 0 0;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+// Long Read Prose - needs bigger text
+// (If you change this, then change the same also in the `editor.css`.)
+
+.long-read {
+  font-size: clamp(1em, calc(0.625em + 1vw), 1.25em);
+  line-height: inherit;
+}
+
+// More link
+
+.more-link {
+  display: block;
+  margin-bottom: 1rem;
+}
