@@ -1,4 +1,4 @@
-# b5st – A Bootstrap 4 Starter Theme, for WordPress
+# b5st – A Bootstrap 5 Starter Theme, for WordPress
 
 *Version 1.0*
 
