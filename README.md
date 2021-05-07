@@ -1,6 +1,6 @@
 # b5st – A Bootstrap 5 Starter Theme, for WordPress
 
-*Version 1.0*
+*Version 1.1*
 
 [https://github.com/SimonPadbury/b5st](https://github.com/SimonPadbury/b5st)
 
@@ -18,7 +18,7 @@
 
 * `b5st.css` is generated from SCSS using `node-sass`. The SCSS files are also included.
 
-* A starter JS script – `theme/css/b5st.js`, enqueued.
+* A starter JS script – `theme/css/b5st.js` – unrequired but present as a starter (and with a commented-out enqueue).
 
 * Dimox breadcrumbs ([http://dimox.net/wordpress-breadcrumbs-without-a-plugin/](http://dimox.net/wordpress-breadcrumbs-without-a-plugin/)). Inserted using an action hook.
 
@@ -29,13 +29,15 @@
 * WordPress. 😎
 
 * Served from CDN’s:
-  * Bootstrap v5.0.0-beta3 CSS
-  * Bootstrap v5.0.0-beta3 _bundle_ JS
+  * Bootstrap v5.0.0 CSS
+  * Bootstrap v5.0.0 _bundle_ JS
   * Bootstrap Icons v1.4.1
 
 * **Optional** (see “Preprocessing SCSS Files” below):
   * NodeJS
   * node-sass
+
+> **Bootstrap Sass is not included.** But you can follow the instructions at [https://getbootstrap.com/docs/5.0/customize/sass/](https://getbootstrap.com/docs/5.0/customize/sass/) to bring Bootstrap Sass into your project.
 
 ## Bootstrap Integration
 
@@ -52,9 +54,11 @@
 
 ## Child-Themes and b5st
 
-_I recommend you do not simply use b5st as-is, and then do all your designing in a child theme._ b5st is only a meant to be a place to start a WordPress/Bootstrap 5 project. It is easier and better to directly rebuild b5st to suit your design needs. Besides, future improvements to b5st may make it not compatible with your child theme -- so, you may not be able to “upgrade” your project to a newer version of b5st simply by swapping it out.
+_I recommend you do not simply use b5st as-is, and then do all your designing in a child theme._
 
-With that said, you can develop child themes based off _your_ b5st-based project. After you have taken and made b5st your own, modifying its layouts, styles etc. to create your own design, and then deployed it on a live website, you can later make child themes _from what will then be your (client’s) website theme_. For example, for special occasions you can make a child themes with alternate colors and backgrounds, seasonal layout changes, etc.
+b5st is only a meant to be a place to start a WordPress/Bootstrap 5 project. It is easier and better to directly rebuild b5st to suit your design needs. Besides, future improvements to b5st may make it not compatible with your child theme -- so, you may not be able to “upgrade” your project to a newer version of b5st simply by swapping it out.
+
+With that said, you can develop child themes _based off your (b5st-based) project_. After you have taken and made b5st your own, modifying its layouts, styles etc. to create your own theme, and then deployed it on a live website, then you can later make child themes _from what will then be your (client’s) website theme_. For example, for special occasions you can make a child themes with alternate colors and backgrounds, seasonal layout changes, etc.
 
 To aid you at that point, b5st has the following child-theme friendly features:
 
