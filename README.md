@@ -28,7 +28,7 @@
 
 * WordPress. 😎
 
-* Served from CDN’s:
+* Served from a CDN:
   * Bootstrap v5.0.0 CSS
   * Bootstrap v5.0.0 _bundle_ JS
   * Bootstrap Icons v1.4.1
