@@ -1,5 +1,9 @@
 # Log
 
+## Version 1.1 -- 7 May 2021
+
+* Now that Bootstrap 5.0.0 is launched, these `bootstrap.css` and `bootatrap.bundle.js` have been enqueued from the CRN instead of the previous beta versions.
+
 ## Initial commit -- 26 April 2021
 
 * Started from a clone of b4st and renamed all as b5st.
