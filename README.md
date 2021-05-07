@@ -37,7 +37,7 @@
   * NodeJS
   * node-sass
 
-> **Bootstrap Sass is not included.** But you can follow the instructions at [https://getbootstrap.com/docs/5.0/customize/sass/](https://getbootstrap.com/docs/5.0/customize/sass/) to bring Bootstrap Sass into your project.
+**Bootstrap Sass is not included.** But you can follow the instructions at [https://getbootstrap.com/docs/5.0/customize/sass/](https://getbootstrap.com/docs/5.0/customize/sass/) to bring Bootstrap Sass into your project.
 
 ## Bootstrap Integration
 
