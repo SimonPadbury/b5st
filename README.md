@@ -1,6 +1,6 @@
 # b5st – A Bootstrap 5 Starter Theme, for WordPress
 
-*Version 1.1*
+*Version 1.2*
 
 [https://github.com/SimonPadbury/b5st](https://github.com/SimonPadbury/b5st)
 
@@ -29,9 +29,9 @@
 * WordPress. 😎
 
 * Served from a CDN:
-  * Bootstrap v5.0.0 CSS
-  * Bootstrap v5.0.0 _bundle_ JS
-  * Bootstrap Icons v1.4.1
+  * Bootstrap v5.0.2 CSS
+  * Bootstrap v5.0.2 _bundle_ JS
+  * Bootstrap Icons v1.5.0
 
 * **Optional** (see “Preprocessing SCSS Files” below):
   * NodeJS
