@@ -1,8 +1,13 @@
 # Log
 
+## Version 1.3 -- 20 Nov 2021
+
+* Fix to `narbar.php`
+* Update Bootstrap to v5.1.3 and Bootstrap Icons to v1.7.1
+
 ## Version 1.1 -- 7 May 2021
 
-* Now that Bootstrap 5.0.0 is launched, these `bootstrap.css` and `bootatrap.bundle.js` have been enqueued from the CRN instead of the previous beta versions.
+* Now that Bootstrap 5.0.0 is launched, these `bootstrap.css` and `bootatrap.bundle.js` have been enqueued from the CDN instead of the previous beta versions.
 
 ## Initial commit -- 26 April 2021
 
