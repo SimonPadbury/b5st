@@ -12,7 +12,7 @@
 <?php b5st_navbar_before();?>
 
 <nav id="site-navbar" class="container-fluid border-bottom navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-fluid px-0">
+  <div class="container-fluid">
 
     <?php b5st_navbar_brand();?>
 
