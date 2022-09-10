@@ -9,6 +9,8 @@
 
 <body <?php body_class(); ?>>
 
+<a class="visually-hidden-focusable d-inline-block p-1" href="#site-main">Skip to main content</a>
+
 <?php b5st_navbar_before();?>
 
 <nav id="site-navbar" class="border-bottom navbar navbar-expand-md navbar-light bg-light">
