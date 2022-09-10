@@ -11,8 +11,8 @@
 
 <?php b5st_navbar_before();?>
 
-<nav id="site-navbar" class="container-fluid border-bottom navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-fluid">
+<nav id="site-navbar" class="border-bottom navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-xxl">
 
     <?php b5st_navbar_brand();?>
 
