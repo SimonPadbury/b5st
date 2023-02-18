@@ -28,6 +28,9 @@ ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0 16px; }
 
+ol.wp-block-latest-comments {
+  padding-left: 0; }
+
 header h2 a {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none; }
