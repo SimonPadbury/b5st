@@ -1,6 +1,6 @@
 # b5st – A Bootstrap 5 Starter Theme, for WordPress
 
-*Version 1.3.2*
+*Version 1.3.3*
 
 [https://github.com/SimonPadbury/b5st](https://github.com/SimonPadbury/b5st)
 
