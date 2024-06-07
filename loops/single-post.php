@@ -87,7 +87,7 @@
 
   <section class="container-xxl my-5">
     <div class="row g-2">
-      <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
+      <?php if (get_previous_post()) { ?>
       <div class="col-sm">
         <div class="border rounded bg-light d-flex align-items-center">
           <i class="bi bi-chevron-compact-left fs-1"></i>
@@ -99,7 +99,7 @@
       </div>
       <?php } ?>
 
-      <?php if (strlen(get_next_post()->post_title) > 0) { ?>
+      <?php if (get_next_post()) { ?>
         <div class="col-sm">
           <div class="border rounded bg-light d-flex flex-row-reverse align-items-center">
           <i class="bi bi-chevron-compact-right fs-1"></i>
@@ -111,17 +111,18 @@
       </div>
       <?php } ?>
 
-      <!-- `<div class="col text-start">
-        <?php previous_post_link('%link', '<i class="bi bi-arrow-left"></i> Previous post: '.'%title'); ?>
-      </div>
-      <div class="col text-end">
-        <?php next_post_link('%link', 'Next post: '.'%title'.' <i class="bi bi-arrow-right"></i>'); ?>
-      </div> -->
+      <?php
+        /*
+        <div class="col text-start">
+          <?php previous_post_link('%link', '<i class="bi bi-arrow-left"></i> Previous post: '.'%title'); ?>
+        </div>
+        <div class="col text-end">
+          <?php next_post_link('%link', 'Next post: '.'%title'.' <i class="bi bi-arrow-right"></i>'); ?>
+        </div>
+        */      
+      ?>
     </div>
   </section>
-
-
-
 
   <?php
   endwhile; else :
